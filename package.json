@@ -12,7 +12,8 @@
     "jquery": "^3.2.1",
     "react": "",
     "react-dom": "",
-    "react-router-dom": ""
+    "react-router-dom": "",
+    "react-canvas": ""
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
