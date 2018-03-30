@@ -1,0 +1,45 @@
+{
+  "name" : "Users & Roles",
+  "description": "App Maker's Base Package for Authentication",
+  "ents": [
+    {
+      "name": "Member",
+      "fields": [
+        {
+          "name": "First Name",
+          "type": "Text"
+        },
+        {
+          "name": "Surname",
+          "type": "Text"
+        },
+        {
+          "name": "Email",
+          "type": "TextEmail"
+        }
+      ]
+    }, {
+      "name": "Group",
+      "fields": [
+        {
+          "name" : "Name of the Group",
+          "type" : "Text"
+        }
+      ]
+    }, {
+      "name": "GroupsOfMember",
+      "fields" : [
+        {
+          "name" : "Member",
+          "type" : "Selection"
+        }, {
+          "name" : "Group",
+          "type" : "Selection"
+        }, {
+          "name" : "Author",
+          "type" : "Yesorno"
+        }
+      ]
+    }
+  ]
+}

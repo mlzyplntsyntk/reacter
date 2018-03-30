@@ -1,0 +1,32 @@
+{
+  "name": "Documentation",
+  "description": "Documents for App Maker",
+  "ents":[
+    {
+      "name": "Contents",
+      "fields": [
+        {
+          "name": "Title",
+          "type": "Text"
+        }, {
+          "name": "Content",
+          "type": "TextRich"
+        }
+      ]
+    }, {
+      "name": "Sub Contents",
+      "fields": [
+        {
+          "name": "Content",
+          "type": "Selection"
+        }, {
+          "name": "Title",
+          "type": "Text"
+        }, {
+          "name": "Content",
+          "type": "TextRich"
+        }
+      ]
+    }
+  ]
+}
