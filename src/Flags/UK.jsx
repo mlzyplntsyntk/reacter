@@ -3,7 +3,7 @@ import React from 'react';
 class UK extends React.Component {
   render() {
     return (
-      <g className={"path-country" + (this.props.visibility === "hidden" ? " _hide" : " _show")}>
+      <g id="UK" className={"path-country" + (this.props.visibility === "hidden" ? " _hide" : " _show")} onClick={this.props.onClick}>
         <defs>
           <path id="SVGID_5_" d="M964.834,220.779c5.038,0,9.121,4.083,9.121,9.121c0,5.038-4.083,9.121-9.121,9.121
             c-5.037,0-9.12-4.083-9.12-9.121C955.713,224.862,959.797,220.779,964.834,220.779L964.834,220.779z"/>
@@ -11,7 +11,7 @@ class UK extends React.Component {
         <clipPath id="SVGID_6_">
           <use xlinkHref="#SVGID_5_"  overflow="visible"/>
         </clipPath>
-        <g clip-path="url(#SVGID_6_)">
+        <g clipPath="url(#SVGID_6_)">
           <polygon fill="#0437A0" points="951.153,220.779 964.834,220.779 978.515,220.779 978.515,239.021 964.834,239.021
             951.153,239.021 951.153,220.779 		"/>
           <polygon fill="#FBF9F8" points="978.515,236.764 968.219,229.899 978.515,223.035 978.515,220.778 975.131,220.778
