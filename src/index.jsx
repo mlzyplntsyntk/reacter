@@ -1328,6 +1328,7 @@ class App extends React.Component {
 
   downed(e) {
     this.setState({downed:true});
+    console.log(e.clientX, e.clientY, this.refs.svg.getAttribute("viewBox"));
   }
 
   moved(e) {
@@ -1343,15 +1344,14 @@ class App extends React.Component {
         });
         return;
     }
-
+    let b = this.getViewBox();
     const diff = {
-      x: cstate.x - this.state.lastMove.x,
-      y: cstate.y - this.state.lastMove.y
+      x: (cstate.x - this.state.lastMove.x) / (500 / b[2]),
+      y: (cstate.y - this.state.lastMove.y) / (250 / b[3])
     }
 
-    let b = this.getViewBox();
-    b[0] = b[0] - diff.x;
-    b[1] = b[1] - diff.y;
+    b[0] = (b[0] - diff.x);
+    b[1] = (b[1] - diff.y);
 
     TweenMax.to(this.refs.svg, 0.1, {
       attr: {viewBox: b.join(" ")},
@@ -1375,8 +1375,11 @@ class App extends React.Component {
   clicked(e) {
     this.setState({
       downed: false,
-      lastMove: null
+      lastMove: null,
+      moved: false
     });
+
+    if (this.state.moved) return;
 
     const trg = e.target;
     this.zoomToCountry(trg);

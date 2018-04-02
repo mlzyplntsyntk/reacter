@@ -11,3 +11,5 @@ export const _coords = {
   "IST" : {  cx:"1124.376", cy:"309.6", posx:-4, posy:-2.5 },
   "ADB" : {  cx:"1117.3", cy:"324.22", posy:0.5 }
 }
+
+export const _destinations = ["TR", "DE", "SP", "FR", "GB", "AT", "BG", "BA", "BE", "DK", "MA", "FI", "NL", "SE", "CH", "NO", "PL", "RO", "GR", "EG"];
